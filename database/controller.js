@@ -19,8 +19,6 @@ export async function getUser(req, res){
     try {
         const { userId } = req.query;
 
-        console.log("req.query: ", req.query);
-
         if(userId){
             const user = await Users.findById(userId);
             res.status(200).json(user)
