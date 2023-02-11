@@ -17,7 +17,7 @@ export async function getUsers(req, res){
 // get : http://localhost:3000/api/users/1
 export async function getUser(req, res){
     try {
-        const { userId } = req;
+        const { userId } = req.query;
 
         if(userId){
             const user = await Users.findById(userId);
